@@ -1,0 +1,35 @@
+/* Include Foundation*/
+@import '../node_modules/foundation-sites/scss/foundation'; //because its in a scss folder
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+
+body {
+    background-color: lightseagreen;
+}
+
+#head-section {
+    @include grid-row();
+
+    h1 {
+        @include grid-column(6);
+    }
+
+    #button-section {
+        @include grid-column(6);
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2%;
+    } 
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+button {
+    background-color: white;
+    padding: 2%;
+}

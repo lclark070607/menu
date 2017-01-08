@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>My Menu App</title>
+    <!--Add css file-->
+    <link rel="stylesheet" href="style.css">
+    <!--add js file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="app.js"></script>
+
+    <script type="x-mustache-template" id="itemsDisplay">
+                <h2>{{ name }}</h2>
+                <h3>{{ description }}</h3>
+                <h2>{{ price }}</h3>
+                <button class="remove">X</button>
+    </script>
+    
+    </head>
+
+    <header>
+        
+        <nav id="head-section">
+            <h1>What's Your Fave?</h1>    
+            <div id="button-section">
+                <button id="add-food">Add New Foods</button>
+                <button id="view-menu">View Whole Menu</button>
+            </div>
+        </nav>
+
+    </header>
+
+    <body>
+    <div id="addNewFoodsList">
+            <input type="text" id="newName" placeholder="Food Name"></input>
+            <input type="text" id="newDescription" placeholder="Description"></input>
+            <input type="text" id="newPrice" placeholder="Price"></input>
+            <!--<input class="submit" type="submit" id="submit">-->
+            <button id="addToMenu">Add to Menu</button>
+        </div>
+        
+        <div id='menu-list'>
+            <input type="text" list="menuItems" name="menuItems"></input>
+                <datalist id="menuItems">
+                    <option value="Spaghetti">
+                    <option value="Chocolate Cake">
+                    <option value="Pancakes">  
+                </datalist>
+            <input type="submit">
+        </div>
+
+        
+            <ul id="menu-display"></ul>
+       
+
+    </body>
+</html>
+
+
+ 
