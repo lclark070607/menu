@@ -23,16 +23,15 @@ let food = [
 
 window.addEventListener('load', function () {
     food.map(displayFood);
-    displayFood(food);
     
-    let submitButton = document.querySelector('#addToMenu');
+    let submitButton = document.querySelector('#addToList');
     submitButton.addEventListener('click', submitFood);
 
-    let showMenuPageButton = document.querySelector('#view-menu');
-    showMenuPageButton.addEventListener('click', hideInputPage);
+    // let showMenuPageButton = document.querySelector('#view-menu');
+    // showMenuPageButton.addEventListener('click', viewWholeMenu);
 
-    let showInputPageButton = document.querySelector("#add-food");
-    showInputPageButton = addEventListener('click', addMenuPage);
+    // let showInputPageButton = document.querySelector("#add-food");
+    // showInputPageButton = addEventListener('click', addFoodItems);
     
     // let deleteButton = document.querySelector('.remove');
     // deleteButton.addEventListener('click', removeFood);
@@ -67,22 +66,35 @@ function submitFood() {
         price: document.querySelector('#newPrice').value,
     }
     food.push(newItem);
-    console.log(newItem);
-    console.log(food);
+    // console.log(newItem);
+    // console.log(food);
     food.map(displayFood);
     };
 
-//This function hides the input page when you class the View Whole Menu button
-function hideInputPage(){
-    let inputPage = document.querySelector('.pages');
-    inputPage.classList.add('hidden');
-}
+//This function hides the input page when you click the View Whole Menu button
+// function viewWholeMenu() {
+
+
+//     let wholeMenu = document.querySelector('#menu-display');
+//     wholeMenu.classList.remove('view');
+// }
+    // view.innerHTML = "";
+
+    // food.map(displayFood);
+    // let showMenu = document.querySelector('#menu-display');
+    // showMenu.classList.remove('.view');
+// }
+
+// function addFoodItems() {
+//     let addItems = document.querySelector('#menu-list');
+//     addItems.classList.add('hidden');
+// }
 
 //This function hides the Whole Menu page when you click the Add Menu Item button
-function addMenuPage() {
-    let menuPage = document.querySelector('.pages #addNewFoodsList');
-    menuPage.classList.remove('hidden');
-}
+// function addMenuPage() {
+//     let menuPage = document.querySelector('.pages #addNewFoodsList');
+//     menuPage.classList.remove('hidden');
+// }
 
     
 
