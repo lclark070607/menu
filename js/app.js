@@ -22,22 +22,28 @@ let food = [
 
 window.addEventListener('load', function () {
     food.map(displayFood);
-    // displayFood();
+    displayFood(food);
     
     let submitButton = document.querySelector('#addToMenu');
     submitButton.addEventListener('click', submitFood);
-    // food.push(newItem);
-    // showMenu();
+
+    let showMenuPageButton = document.querySelector('#view-menu');
+    showMenuPageButton.addEventListener('click', hideInputPage);
+
+    let showInputPageButton = document.querySelector("#add-food");
+    showInputPageButton = addEventListener('click', addMenuPage);
     
     // let deleteButton = document.querySelector('.remove');
     // deleteButton.addEventListener('click', removeFood);
     
-
 });
 
 // This function displays my initial food array
 
 function displayFood(food) {
+    let menuList = document.querySelector('#menu-display');
+    menuList.innerHTML = '';
+    
     let child = document.createElement('li');
     let parent = document.querySelector('#menu-display');
     let template = document.querySelector('#itemsDisplay');
@@ -60,20 +66,25 @@ function submitFood() {
         price: document.querySelector('#newPrice').value,
     }
     food.push(newItem);
-   
-   let newFoodArray = food.push(newItem);
-   document.getElementById("#menu-list").innerHTML = newFoodArray;
+    console.log(newItem);
+    console.log(food);
+    food.map(displayFood);
     };
+
+//This function hides the input page when you class the View Whole Menu button
+function hideInputPage(){
+    let inputPage = document.querySelector('.pages');
+    inputPage.classList.add('hidden');
+}
+
+//This function hides the Whole Menu page when you click the Add Menu Item button
+function addMenuPage() {
+    let menuPage = document.querySelector('.pages #addNewFoodsList');
+    menuPage.classList.remove('hidden');
+}
+
     
 
-// function showMenu() {
-//     let menuList = document.querySelector('#menu-display');
-//     menuList.innerHTML = '';
-
-//     for (let i = 0; i < food.length; i++) {
-//         let newMenu = displayFood(food[i])
-//     }
-// }
 
 // function removeFood() {
 //     for(let i in food) {
@@ -86,7 +97,7 @@ function submitFood() {
 //         }
 //     }
 // }
-    // saveMenu function needs to be created saveMenu(); add }
+   
 
 
 

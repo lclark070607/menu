@@ -29,7 +29,7 @@
     </header>
 
     <body>
-    <div id="addNewFoodsList">
+    <div class="pages" id="addNewFoodsList">
             <input type="text" id="newName" placeholder="Food Name"></input>
             <input type="text" id="newDescription" placeholder="Description"></input>
             <input type="text" id="newPrice" placeholder="Price"></input>
@@ -37,7 +37,7 @@
             <button id="addToMenu">Add to Menu</button>
         </div>
         
-        <div id='menu-list'>
+        <div class="pages hidden" id='menu-list'>
             <input type="text" list="menuItems" name="menuItems"></input>
                 <datalist id="menuItems">
                     <option value="Spaghetti">
@@ -45,11 +45,9 @@
                     <option value="Pancakes">  
                 </datalist>
             <input type="submit">
-        </div>
-
         
             <ul id="menu-display"></ul>
-       
+       </div>
 
     </body>
 </html>
