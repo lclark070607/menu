@@ -1,4 +1,3 @@
-// Initial array of menu items
 let food = [
     {
     name: 'Spaghetti',
@@ -20,6 +19,12 @@ let food = [
 
 ];
 
+// I tried to place this in a food.js file with module.exports = food; but with
+// removed my list.  I deleted the food.js file.
+
+// let food = require('./food');
+// console.log(food);
+
 window.addEventListener('load', function () {
     update(food);
     
@@ -32,14 +37,14 @@ window.addEventListener('load', function () {
     //  let searchbox = document.querySelector('#foodSearch');
     // searchbox.addEventListener('keyup', function(event) {
     // if (KeyboardEvent.key) {
-    //     // open help widget
+    //     // ???
     // }
     
 
     // let showInputPageButton = document.querySelector('#addToMenu');
     // showInputPageButton = addEventListener('click', addFoodInput);
     
-    // let deleteButton = document.querySelector('.remove');
+    // let deleteButton = document.querySelector('#remove');
     // deleteButton.addEventListener('click', removeFood);
     
 });
@@ -98,6 +103,28 @@ function viewWholeMenu() {
    "Add New Foods";
 }
 
+// function removeFood() {
+//     let x = document.getElementById("li");
+//     x.remove(x.selectedIndex);
+// }
+
+// let btn = document.getElementById('remove');
+//     document.getElementById('food[i]').remove();
+//     this.remove();
+// };
+
+
+//     for(let i in food) {
+//         if(food[i].name === name) {
+//             food[i].count --;
+//             if(food[i].count === 0) {
+//                 food.splice(i, 1);
+//             }
+//             break;
+//         }
+//     }
+// }
+
 
 // function addFoodInput() {
 //     let menuList = document.querySelector('.hidden');
@@ -141,17 +168,7 @@ function viewWholeMenu() {
     
 
 
-// function removeFood() {
-//     for(let i in food) {
-//         if(food[i].name === name) {
-//             food[i].count --;
-//             if(food[i].count === 0) {
-//                 food.splice(i, 1);
-//             }
-//             break;
-//         }
-//     }
-// }
+
    
 
 

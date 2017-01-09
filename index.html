@@ -6,12 +6,13 @@
     <!--add js file-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script src="app.js"></script>
+    <!--<script src="food.js"></script>-->
 
     <script type="x-mustache-template" id="itemsDisplay">
                 <h2>{{ name }}</h2>
                 <h3>{{ description }}</h3>
                 <h2>${{ price }}</h3>
-                <button class="remove">X</button>
+                <button id="remove">X</button>
     </script>
     
     </head>
@@ -25,9 +26,7 @@
                 <button id="view-menu">View Whole Menu</button>
             </div>
         </nav>
-
-<!--data-launch-view="menu-list"
-data-launch-view="addNewFoodsList"-->
+        
     </header>
 
     <body>

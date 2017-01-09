@@ -1,5 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-// Initial array of menu items
 let food = [
     {
     name: 'Spaghetti',
@@ -21,6 +20,12 @@ let food = [
 
 ];
 
+// I tried to place this in a food.js file with module.exports = food; but with
+// removed my list.  I deleted the food.js file.
+
+// let food = require('./food');
+// console.log(food);
+
 window.addEventListener('load', function () {
     update(food);
     
@@ -33,14 +38,14 @@ window.addEventListener('load', function () {
     //  let searchbox = document.querySelector('#foodSearch');
     // searchbox.addEventListener('keyup', function(event) {
     // if (KeyboardEvent.key) {
-    //     // open help widget
+    //     // ???
     // }
     
 
     // let showInputPageButton = document.querySelector('#addToMenu');
     // showInputPageButton = addEventListener('click', addFoodInput);
     
-    // let deleteButton = document.querySelector('.remove');
+    // let deleteButton = document.querySelector('#remove');
     // deleteButton.addEventListener('click', removeFood);
     
 });
@@ -99,6 +104,28 @@ function viewWholeMenu() {
    "Add New Foods";
 }
 
+// function removeFood() {
+//     let x = document.getElementById("li");
+//     x.remove(x.selectedIndex);
+// }
+
+// let btn = document.getElementById('remove');
+//     document.getElementById('food[i]').remove();
+//     this.remove();
+// };
+
+
+//     for(let i in food) {
+//         if(food[i].name === name) {
+//             food[i].count --;
+//             if(food[i].count === 0) {
+//                 food.splice(i, 1);
+//             }
+//             break;
+//         }
+//     }
+// }
+
 
 // function addFoodInput() {
 //     let menuList = document.querySelector('.hidden');
@@ -142,17 +169,7 @@ function viewWholeMenu() {
     
 
 
-// function removeFood() {
-//     for(let i in food) {
-//         if(food[i].name === name) {
-//             food[i].count --;
-//             if(food[i].count === 0) {
-//                 food.splice(i, 1);
-//             }
-//             break;
-//         }
-//     }
-// }
+
    
 
 
