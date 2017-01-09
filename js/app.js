@@ -21,16 +21,23 @@ let food = [
 ];
 
 window.addEventListener('load', function () {
-    food.map(displayFood);
+    update(food);
     
     let submitButton = document.querySelector('#addToList');
     submitButton.addEventListener('click', submitFood);
 
-    // let showMenuPageButton = document.querySelector('#view-menu');
-    // showMenuPageButton.addEventListener('click', viewWholeMenu);
+    let showMenuPageButton = document.querySelector('#view-menu');
+    showMenuPageButton.addEventListener('click', viewWholeMenu);
 
-    // let showInputPageButton = document.querySelector("#add-food");
-    // showInputPageButton = addEventListener('click', addFoodItems);
+    //  let searchbox = document.querySelector('#foodSearch');
+    // searchbox.addEventListener('keyup', function(event) {
+    // if (KeyboardEvent.key) {
+    //     // open help widget
+    // }
+    
+
+    // let showInputPageButton = document.querySelector('#addToMenu');
+    // showInputPageButton = addEventListener('click', addFoodInput);
     
     // let deleteButton = document.querySelector('.remove');
     // deleteButton.addEventListener('click', removeFood);
@@ -40,8 +47,8 @@ window.addEventListener('load', function () {
 // This function displays my initial food array
 
 function displayFood(food) {
-    let menuList = document.querySelector('#menu-display');
-    menuList.innerHTML = '';
+    // let menuList = document.querySelector('#menu-display');
+    // menuList.innerHTML = '';
     
     let child = document.createElement('li');
     let parent = document.querySelector('#menu-display');
@@ -67,11 +74,47 @@ function submitFood() {
     food.push(newItem);
     // console.log(newItem);
     // console.log(food);
-    food.map(displayFood);
+    update(food);
+    viewWholeMenu();
     };
 
+// Keeping it DRY function to clear & reset menu
+function update(food) {
+    let menuList = document.querySelector('#menu-display');
+    menuList.innerHTML = '';
+    food.map(displayFood);
+    }
+
 //This function hides the input page when you click the View Whole Menu button
-// function viewWholeMenu() {
+function viewWholeMenu() {
+    let inputList = document.querySelector('#inputList');
+        if (inputList.style.visibility === 'hidden') {
+        inputList.style.visibility = 'visible';
+    } else {
+        inputList.style.visibility = 'hidden';
+    }
+
+    document.getElementById("view-menu").innerHTML=
+   "Add New Foods";
+}
+
+
+// function addFoodInput() {
+//     let menuList = document.querySelector('.hidden');
+//        if(menuList.style.visibility === 'visible') {
+//         menuListList.style.visibility = 'hidden';
+//        }
+// };
+     
+
+
+
+//         if (menuList == 'none') {
+//             menuList = 'block';
+//         } else {
+//             menuList = 'none';
+//     }
+// }
 
 
 //     let wholeMenu = document.querySelector('#menu-display');

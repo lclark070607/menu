@@ -10,7 +10,7 @@
     <script type="x-mustache-template" id="itemsDisplay">
                 <h2>{{ name }}</h2>
                 <h3>{{ description }}</h3>
-                <h2>{{ price }}</h3>
+                <h2>${{ price }}</h3>
                 <button class="remove">X</button>
     </script>
     
@@ -21,24 +21,25 @@
         <nav id="head-section">
             <h1>What's Your Fave?</h1>    
             <div id="button-section">
-                <button id="addToMenu" data-launch-view="menu-list">Add New Foods</button>
-                <button id="view-menu" data-launch-view="addNewFoodsList">View Whole Menu</button>
+                <!--<button id="addToMenu">Add New Foods</button>-->
+                <button id="view-menu">View Whole Menu</button>
             </div>
         </nav>
 
+<!--data-launch-view="menu-list"
+data-launch-view="addNewFoodsList"-->
     </header>
 
     <body>
-    <div class="view">
+    <div id="inputList">
             <input type="text" id="newName" placeholder="Food Name"></input>
             <input type="text" id="newDescription" placeholder="Description"></input>
             <input type="text" id="newPrice" placeholder="Price"></input>
-            <!--<input class="submit" type="submit" id="submit">-->
             <button id="addToList">Add to Menu</button>
         </div>
         
-        <div>
-            <input type="text" list="menuItems" name="menuItems"></input>
+        <div id="menuList">
+            <input id="foodSearch" type="text" list="menuItems" name="menuItems"></input>
                 <datalist id="menuItems">
                     <option value="Spaghetti">
                     <option value="Chocolate Cake">

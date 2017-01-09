@@ -1269,7 +1269,9 @@ body {
     width: 50%;
     float: left;
     padding-right: 0.625rem;
-    padding-left: 0.625rem; }
+    padding-left: 0.625rem;
+    color: white;
+    text-shadow: 2px 2px 2px black; }
     @media print, screen and (min-width: 40em) {
       #head-section h1 {
         padding-right: 0.9375rem;
@@ -1293,8 +1295,13 @@ body {
 
 ul {
   list-style-type: none;
-  text-align: center; }
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black; }
 
 button {
   background-color: white;
   padding: 2%; }
+
+.hidden {
+  display: none !important; }
